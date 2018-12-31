@@ -1,0 +1,354 @@
+{
+  "腾讯社招": {
+    "登陆页面": "https://hr.tencent.com/login.php",
+    "投简历": [
+      {
+        "action": "element_click",
+        "arg": "#apppos"
+      }
+    ],
+    "搜索选项": {
+      "搜索页地址": [
+        {
+          "action": "to_website",
+          "arg": "https://hr.tencent.com/social.php"
+        }
+      ],
+      "工作地点": [
+        {
+          "action": "element_click",
+          "arg": "#socia_search > div:nth-child(1) > div.show"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "深圳": "#socia_search > div:nth-child(1) > div.options > div:nth-child(2)",
+            "北京": "#socia_search > div:nth-child(1) > div.options > div:nth-child(3)",
+            "上海": "#socia_search > div:nth-child(1) > div.options > div:nth-child(4)",
+            "广州": "#socia_search > div:nth-child(1) > div.options > div:nth-child(5)",
+            "杭州": "#socia_search > div:nth-child(1) > div.options > div:nth-child(9)"
+          }
+        }
+      ],
+      "工作类型": [
+        {
+          "action": "element_click",
+          "arg": "#socia_search > div.select.ml9 > div.show"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "技术": "#socia_search > div.select.ml9 > div.options > div:nth-child(2)",
+            "产品": "#socia_search > div.select.ml9 > div.options > div:nth-child(3)",
+            "市场": "#socia_search > div.select.ml9 > div.options > div:nth-child(4)",
+            "设计": "#socia_search > div.select.ml9 > div.options > div:nth-child(5)",
+            "职能": "#socia_search > div.select.ml9 > div.options > div:nth-child(6)",
+            "内容编辑": "#socia_search > div.select.ml9 > div.options > div:nth-child(7)",
+            "客户服务": "#socia_search > div.select.ml9 > div.options > div:nth-child(8)"
+          }
+        }
+      ],
+      "搜索关键词": [
+        {
+          "action": "input_click",
+          "arg": "#hsearch"
+        }
+      ]
+    },
+    "抓取内容": {
+      "table_path": "#position > div.left.wcont_b.box > table > tbody > tr > td.l.square > a",
+      "item_fields": {
+        "职位名称": "#sharetitle",
+        "职位描述": "#position_detail > div > table > tbody"
+      }
+    },
+    "翻页按钮": {
+      "pagination_path": "#next"
+    }
+  },
+  "前程无忧": {
+    "登陆页面": "https://login.51job.com/login.php",
+    "投简历": [
+      {
+        "action": "element_click",
+        "arg": "#app_ck"
+      }
+    ],
+    "搜索选项": {
+      "搜索页地址": [
+        {
+          "action": "to_website",
+          "arg": "https://search.51job.com/"
+        }
+      ],
+      "工作地点": [
+        {
+          "action": "element_click",
+          "arg": "#work_position_input"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "北京": "#work_position_click_center_right_list_category_000000_010000",
+            "上海": "#work_position_click_center_right_list_category_000000_020000",
+            "广州": "#work_position_click_center_right_list_category_000000_030200",
+            "深圳": "#work_position_click_center_right_list_category_000000_040000",
+            "成都": "#work_position_click_center_right_list_category_000000_090200"
+          }
+        },
+        {
+          "action": "element_click",
+          "arg": "#work_position_click_bottom_save"
+        }
+      ],
+      "工作类型": [
+        {
+          "action": "element_click",
+          "arg": "#indtype_input"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "计算机|互联网|通信|电子": "#indtype_click_center_left_each_01",
+            "会计|金融|银行|保险": "#indtype_click_center_left_each_41",
+            "贸易|消费|制造|营运": "#indtype_click_center_left_each_04",
+            "制药|医疗": "#indtype_click_center_left_each_08",
+            "广告|媒体": "#indtype_click_center_left_each_12"
+          }
+        },
+        {
+          "action": "element_click",
+          "arg": "#indtype_click_bottom_save"
+        }
+      ],
+      "搜索关键词": [
+        {
+          "action": "input_click",
+          "arg": "#kwdselectid"
+        }
+      ]
+    },
+    "抓取内容": {
+      "table_path": "#resultList > div > p > span > a",
+      "item_fields": {
+        "职位名称": "div.tHeader.tHjob > div > div.cn > h1",
+        "职位描述": "div.tCompany_main"
+      }
+    },
+    "翻页按钮": {
+      "pagination_path": "#resultList > div.dw_page > div > div > div > ul > li:last-child> a"
+    }
+  },
+  "BOSS直聘": {
+    "登陆页面": "https://login.zhipin.com/",
+    "投简历": [
+      {
+        "action": "element_click",
+        "arg": "div.job-detail > div.detail-op > div > a"
+      }
+    ],
+    "搜索选项": {
+      "搜索页地址": [
+        {
+          "action": "to_website",
+          "arg": "https://www.zhipin.com/c100010000/?query="
+        }
+      ],
+      "工作地点": [
+        {
+          "action": "element_click",
+          "arg": {
+            "全国": "div.condition-box > dl > dd > a:nth-child(3)",
+            "北京": "div.condition-box > dl > dd > a:nth-child(4)",
+            "上海": "div.condition-box > dl > dd > a:nth-child(5)",
+            "广州": "div.condition-box > dl > dd > a:nth-child(6)",
+            "深圳": "div.condition-box > dl > dd > a:nth-child(7)",
+            "杭州": "div.condition-box > dl > dd > a:nth-child(8)",
+            "天津": "div.condition-box > dl > dd > a:nth-child(9)"
+          }
+        }
+      ],
+      "工作经验": [
+        {
+          "action": "element_click",
+          "arg": "div.filter-select-box > div:nth-child(1) > span > input"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "不限": "div.filter-select-box > div:nth-child(1) > span > div > ul > li:nth-child(1) > a",
+            "应届生": "div.filter-select-box > div:nth-child(1) > span > div > ul > li:nth-child(2) > a",
+            "1年以内": "div.filter-select-box > div:nth-child(1) > span > div > ul > li:nth-child(3) > a",
+            "3-5年": "div.filter-select-box > div:nth-child(1) > span > div > ul > li:nth-child(4) > a",
+            "5-10年": "div.filter-select-box > div:nth-child(1) > span > div > ul > li:nth-child(5) > a",
+            "10年以上": "div.filter-select-box > div:nth-child(1) > span > div > ul > li:nth-child(6) > a"
+          }
+        }
+      ],
+      "搜索关键词": [
+        {
+          "action": "input_click",
+          "arg": "div.search-form-con > p > input"
+        }
+      ]
+    },
+    "抓取内容": {
+      "table_path": "div > div.info-primary > p",
+      "item_fields": {
+        "职位名称": "div.info-primary > div.name > h1",
+        "职位描述": "div.detail-content > div:nth-child(1) > div"
+      }
+    },
+    "翻页按钮": {
+      "pagination_path": "a.next"
+    }
+  },
+  "智联招聘": {
+    "登陆页面": "https://passport.zhaopin.com/account/login",
+    "投简历": [
+      {
+        "action": "element_click",
+        "arg": "#applyVacButton1"
+      }
+    ],
+    "搜索选项": {
+      "搜索页地址": [
+        {
+          "action": "to_website",
+          "arg": "https://sou.zhaopin.com/"
+        },
+        {
+          "action": "element_click",
+          "arg": "div.a-modal.risk-warning > div > div > button"
+        }
+      ],
+      "工作地点": [
+        {
+          "action": "element_click",
+          "arg": "#queryTitleUls > li >span.current-city__name"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "全国": "#queryCityBox > div > ul > li:nth-child(1) > a",
+            "北京": "#queryCityBox > div > ul > li:nth-child(2) > a",
+            "上海": "#queryCityBox > div > ul > li:nth-child(3) > a",
+            "深圳": "#queryCityBox > div > ul > li:nth-child(4) > a",
+            "广州": "#queryCityBox > div > ul > li:nth-child(5) > a",
+            "成都": "#queryCityBox > div > ul > li:nth-child(7) > a",
+            "杭州": "#queryCityBox > div > ul > li:nth-child(8) > a"
+          }
+        }
+      ],
+      "工作经验": [
+        {
+          "action": "element_click",
+          "arg": "div.query-others__title__item.query-others__title__item"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "不限": "div.query-others__borders.workExperience > ul > li:nth-child(1) > a",
+            "无经验": "div.query-others__borders.workExperience > ul > li:nth-child(2) > a",
+            "1年以下": "div.query-others__borders.workExperience > ul > li:nth-child(3) > a",
+            "1-3年": "div.query-others__borders.workExperience > ul > li:nth-child(4) > a",
+            "3-5年": "div.query-others__borders.workExperience > ul > li:nth-child(5) > a"
+          }
+        }
+      ],
+      "工作类型": [
+        {
+          "action": "element_click",
+          "arg": {
+            "不限": "#search > div:nth-child(2) > div.query-search__border__content > div > a",
+            "互联网/IT": "#search > div:nth-child(2) > div.query-search__border__content > div > ul > li:nth-child(1)",
+            "金融": "#search > div:nth-child(2) > div.query-search__border__content > div > ul > li:nth-child(2)",
+            "房地产/建筑": "#search > div:nth-child(2) > div.query-search__border__content > div > ul > li:nth-child(3)",
+            "商业服务": "#search > div:nth-child(2) > div.query-search__border__content > div > ul > li:nth-child(4)",
+            "贸易/批发/零售": "#search > div:nth-child(2) > div.query-search__border__content > div > ul > li:nth-child(5)"
+          }
+        }
+      ],
+      "搜索关键词": [
+        {
+          "action": "input_click",
+          "arg": "div.zp-search-common > input"
+        }
+      ]
+    },
+    "抓取内容": {
+      "table_path": "div.jobName > span:nth-child(1)",
+      "item_fields": {
+        "职位名称": "li > h1",
+        "职位描述": "div.responsibility.pos-common > div.pos-ul"
+      }
+    },
+    "翻页按钮": {
+      "pagination_path": "//*[@id='pagination_content']/div/button[2]"
+    }
+  },
+  "美团社招": {
+    "登陆页面": "https://join.dianping.com/",
+    "投简历": [
+      {
+        "action": "element_click",
+        "arg": "div.job-detail_status>div"
+      }
+    ],
+    "搜索选项": {
+      "搜索页地址": [
+        {
+          "action": "to_website",
+          "arg": "https://join.dianping.com/job-list"
+        }
+      ],
+      "工作地点": [
+        {
+            "action": "element_click",
+            "arg": "div.select-city > button"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "广东省": "div.mt-trigger-wrapper > div > div > ul > li:nth-child(3) > a > span",
+            "北京市": "div.mt-trigger-wrapper > div > div > ul > li:nth-child(1) > a > span",
+            "上海市": "div.mt-trigger-wrapper > div > div > ul > li:nth-child(2) > a > span"
+          }
+        }
+      ],
+      "工作经验": [
+        {
+          "action": "element_click",
+          "arg": "div.pop-work-exp > button"
+        },
+        {
+          "action": "element_click",
+          "arg": {
+            "不限": "div.pop-work-exp > div > div > div > div.mt-trigger-wrapper > div > div > ul > li:nth-child(1) > div",
+            "一年": "div.pop-work-exp > div > div > div > div.mt-trigger-wrapper > div > div > ul > li:nth-child(2) > div",
+            "二年": "div.pop-work-exp > div > div > div > div.mt-trigger-wrapper > div > div > ul > li:nth-child(3) > div",
+            "三年": "div.pop-work-exp > div > div > div > div.mt-trigger-wrapper > div > div > ul > li:nth-child(4) > div",
+            "四年": "div.pop-work-exp > div > div > div > div.mt-trigger-wrapper > div > div > ul > li:nth-child(5) > div",
+            "五年": "div.pop-work-exp > div > div > div > div.mt-trigger-wrapper > div > div > ul > li:nth-child(6) > div"
+          }
+        }
+      ],
+      "搜索关键词": [
+        {
+          "action": "input_click",
+          "arg": "div.search-type.job-list-search-type > div.mt-input.mt-input-text > span > div > input"
+        }
+      ]
+    },
+    "抓取内容": {
+      "table_path": "ul.job-list-box > li > a > h1 > span:nth-child(1)",
+      "item_fields": {
+        "职位名称": "span.job-detail_name",
+        "职位描述": "div.job-detail_desc"
+      }
+    },
+    "翻页按钮": {
+      "pagination_path": "li.mt-pagination-next"
+    }
+  }
+}

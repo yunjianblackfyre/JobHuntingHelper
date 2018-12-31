@@ -1,0 +1,26 @@
+1.New word extraction
+    The input of new word extraction, comes from DB directly. More specifically, Field "Fjob_detail"
+    Every job_detail is submitted under these preprocess rules:
+        Replace all continues white space mark(\s+) with one white space
+        Replace all puntuations with one white space
+        Replace all stop words with one white space
+        Mapping some special words
+    When new word extraction is running, There are things you need to be careful about:
+        existed words in Jieba will be filtered
+        existed words in FULL_STOP_WORDS will be filtered
+        new word that does not satisfy free_level or sld_level threshold condition will be filtered
+        new word that is too long or too short will be filtered
+        all english words will be ignored
+    When new word finding process is done, a json txt file that store a dict(new_word:its_freq)
+    can be found by path "./new_words/new_words.txt"
+    
+    The final step of new word extraction is human sensorship.
+    After the final refined new word file is created(still a json file),
+    Change file format from json to txt file like this: 
+        new_word_1 13962 vn
+        new_word_2 13962 vn
+        new_word_3 13962 vn
+        ...... (new_word, its_freq, word_tag)
+    Later, Jieba can read this file, and add all the new words into its training corpus
+    (When you get back home, rerun new word extraction)
+    

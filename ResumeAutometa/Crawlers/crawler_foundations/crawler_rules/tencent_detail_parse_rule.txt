@@ -1,0 +1,9 @@
+{
+    "fields":{
+        "Fjob_name":       "#sharetitle",
+        "Flocation":    "tr.c.bottomline > td:nth-child(1)",
+        "Fjob_cat":     "tr.c.bottomline > td:nth-child(2)",
+        "Fjob_detail_1":     "#position_detail > div > table > tr.c:nth-child(3)",
+        "Fjob_detail_2":     "#position_detail > div > table > tr.c:nth-child(4)"
+    }
+}

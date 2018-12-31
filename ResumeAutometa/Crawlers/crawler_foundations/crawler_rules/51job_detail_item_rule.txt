@@ -1,0 +1,72 @@
+{
+    "item_db": "db_crawlers",
+    "item_format": {
+        "Fjob_detail": {
+            "dup": false,
+            "req": true,
+            "type": "str"
+        },
+        "Fjob_name": {
+            "dup": false,
+            "req": true,
+            "type": "str"
+        },
+        "Freq_year": {
+            "dup": false,
+            "req": false,
+            "type": "str"
+        },
+        "Flocation": {
+            "dup": false,
+            "req": false,
+            "type": "str"
+        },
+        "Fsalary": {
+            "dup": false,
+            "req": false,
+            "type": "str"
+        },
+        "Fjob_url": {
+            "dup": true,
+            "req": true,
+            "type": "str"
+        },
+        "Fjob_cat": {
+            "dup": false,
+            "req": true,
+            "type": "str"
+        },
+        "Fgang_detail": {
+            "dup": false,
+            "req": false,
+            "type": "str"
+        },
+        "Freq_edu": {
+            "dup": false,
+            "req": false,
+            "type": "str"
+        },
+        "Fgang_name": {
+            "dup": false,
+            "req": false,
+            "type": "str"
+        },
+        "Fpub_time": {
+            "dup": false,
+            "req": true,
+            "type": "str"
+        },
+        "Fcreate_time": {
+            "dup": false,
+            "req": true,
+            "type": "str"
+        },
+        "Fmodify_time": {
+            "dup": false,
+            "req": true,
+            "type": "str"
+        }
+    },
+    "write_table_method": "update",
+    "item_table": "t_51job_detail"
+}

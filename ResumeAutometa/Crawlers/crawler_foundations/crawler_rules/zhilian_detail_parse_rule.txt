@@ -1,0 +1,12 @@
+{
+    "fields":{
+        "Fjob_name":       "h1.info-h3",
+        "Fsalary":      "div.info-money>strong",
+        "Freq_year":  "div.info-three.l > span:nth-child(2)",
+        "Flocation":    "div.info-three.l > span:nth-child(1)",
+        "Freq_edu":      "div.info-three.l > span:nth-child(3)",
+        "Fjob_detail":     "div.pos-ul",
+        "Fgang_name":       "div.company > a",
+        "Fgang_detail":     "div.intro-content"
+    }
+}

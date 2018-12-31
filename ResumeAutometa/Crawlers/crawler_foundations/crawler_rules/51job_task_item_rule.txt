@@ -1,0 +1,9 @@
+{
+    "item_format":{
+        "Ftask_url":{"type":"str","req":true,"dup":true},
+        "Ftask_info":{"type":"str","req":false,"dup":false}
+    },
+    "item_db":"db_crawlers",
+    "item_table":"t_51job_task",
+    "write_table_method":"update"
+}

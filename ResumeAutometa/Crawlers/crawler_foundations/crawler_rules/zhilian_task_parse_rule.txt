@@ -1,0 +1,10 @@
+{
+    "children_path": "#newlist_list_content_table > table",
+    "fields": {},
+    "children": {
+        "fields": {
+            "Ftask_url": "td.zwmc > div > a::attr(href)"
+        }
+    },
+    "page_next": "li.pagesDown-pos > a::attr(href)"
+}

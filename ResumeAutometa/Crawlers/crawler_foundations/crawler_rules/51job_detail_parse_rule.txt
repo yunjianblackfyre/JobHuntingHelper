@@ -1,0 +1,12 @@
+{
+    "fields":{
+        "Fjob_name":       "div.cn > h1",
+        "Fsalary":      "div.cn > strong",
+        "Freq_year":  "div.cn > p.msg.ltype",
+        "Flocation":    "div.cn > p.msg.ltype",
+        "Freq_edu":      "div.cn > p.msg.ltype",
+        "Fjob_detail":     "div.tCompany_main > div:nth-child(1) > div",
+        "Fgang_name":       "div.cn > p.cname > a.catn",
+        "Fgang_detail":     "div.tCompany_main > div:nth-child(3) > div"
+    }
+}

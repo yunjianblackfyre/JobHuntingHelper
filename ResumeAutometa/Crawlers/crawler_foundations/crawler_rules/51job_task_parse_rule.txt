@@ -1,0 +1,10 @@
+{
+    "children_path": "#resultList > div.el",
+    "fields": {},
+    "children": {
+        "fields": {
+            "Ftask_url": "a::attr(href)"
+        }
+    },
+    "page_next": "div.dw_page > div > div > div > ul > li:nth-last-child(1) > a::attr(href)"
+}

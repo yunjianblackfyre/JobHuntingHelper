@@ -1,0 +1,132 @@
+  "拉勾招聘": {
+    "登陆页面": "https://passport.lagou.com/login/login.html",
+    "搜索选项": {
+      "搜索页地址": [
+        {
+          "action": "to_website",
+          "arg": "https://www.lagou.com"
+        },
+        {
+          "action": "element_click",
+          "arg": "#changeCityBox > p.checkTips > a"
+        },
+        {
+          "action": "to_website",
+          "arg": "https://www.lagou.com/jobs/list_?"
+        }
+      ],
+      "工作地点": [
+        {
+          "action": "element_click",
+          "arg": {
+            "全国": "div.current-handle-position > a",
+            "北京": "div.city-wrapper > a:nth-child(1)",
+            "上海": "div.city-wrapper > a:nth-child(2)",
+            "深圳": "div.city-wrapper > a:nth-child(3)",
+            "广州": "div.city-wrapper > a:nth-child(4)",
+            "杭州": "div.city-wrapper > a:nth-child(5)",
+            "成都": "div.city-wrapper > a:nth-child(6)"
+          }
+        }
+      ],
+      "工作经验": [
+        {
+          "action": "element_click",
+          "arg": {
+            "不限": "#filterCollapse > li:nth-child(2) > a.active",
+            "应届毕业生": "#filterCollapse > li:nth-child(2) > a:nth-child(3)",
+            "3年及以下": "#filterCollapse > li:nth-child(2) > a:nth-child(4)",
+            "3-5年": "#filterCollapse > li:nth-child(2) > a:nth-child(5)",
+            "5-10年": "#filterCollapse > li:nth-child(2) > a:nth-child(6)",
+            "10年以上": "#filterCollapse > li:nth-child(2) > a:nth-child(7)"
+          }
+        }
+      ],
+      "工作类型": [
+        {
+          "action": "element_click",
+          "arg": {
+            "不限": "#filterCollapse > div.has-more.hy-area > li > a.active",
+            "移动互联网": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(3)",
+            "电子商务": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(4)",
+            "金融": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(5)",
+            "企业服务": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(6)",
+            "教育": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(7)",
+            "文化娱乐": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(8)",
+            "游戏": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(9)",
+            "O2O": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(10)",
+            "硬件": "#filterCollapse > div.has-more.hy-area > li > a:nth-child(11)"
+          }
+        }
+      ],
+      "搜索关键词": [
+        {
+          "action": "input_click",
+          "arg": "#keyword"
+        }
+      ]
+    },
+    "抓取内容": {
+      "table_path": "div.list_item_top > div.position > div.p_top > a > h3",
+      "item_fields": {
+        "职位名称": "div.position-content-l > div > span",
+        "职位描述": "#job_detail > dd.job_bt > div"
+      }
+    },
+    "翻页按钮": {
+      "pagination_path": "div > span.pager_next"
+    }
+  },
+  
+  "头条社招": {
+    "登陆页面": "https://job.bytedance.com/campus/position",
+    "搜索选项": {
+      "搜索页地址": [
+        {
+          "action": "to_website",
+          "arg": "https://job.bytedance.com/society"
+        }
+      ],
+      "工作地点": [
+        {
+          "action": "element_click",
+          "arg": {
+            "北京": "div.select-filter-wrap > div:nth-child(2) > div.select-list > div:nth-child(2) > span",
+            "深圳": "div.select-filter-wrap > div:nth-child(2) > div.select-list > div:nth-child(3) > span",
+            "上海": "div.select-filter-wrap > div:nth-child(2) > div.select-list > div:nth-child(4) > span",
+            "广州": "div.select-filter-wrap > div:nth-child(2) > div.select-list > div:nth-child(5) > span"
+          }
+        }
+      ],
+      "工作类型": [
+        {
+          "action": "element_click",
+          "arg": {
+            "研发": "div.select-filter-wrap > div:nth-child(1) > div.select-list > div:nth-child(2) > span",
+            "产品/设计": "div.select-filter-wrap > div:nth-child(1) > div.select-list > div:nth-child(3) > span",
+            "市场/销售": "div.select-filter-wrap > div:nth-child(1) > div.select-list > div:nth-child(4) > span",
+            "职能/支持": "div.select-filter-wrap > div:nth-child(1) > div.select-list > div:nth-child(5) > span",
+            "运营/编辑": "div.select-filter-wrap > div:nth-child(1) > div.select-list > div:nth-child(6) > span"
+          }
+        }
+      ],
+      "搜索关键词": [
+        {
+          "action": "input_click",
+          "arg": "div.search-bar-container > div > input"
+        }
+      ]
+    },
+    "抓取内容": {
+      "table_path": "table > tbody > tr > td > div > a > span",
+      "item_fields": {
+        "职位名称": "div.job-title > span",
+        "职位描述": "div.job-content"
+      }
+    },
+    "翻页按钮": {
+      "pagination_path": "button.btn-next > i"
+    }
+  },
+
+  

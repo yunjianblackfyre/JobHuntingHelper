@@ -1,0 +1,9 @@
+{
+    "children_path": "#position > div.left.wcont_b.box > table > tr >td.l.square",
+    "fields": {},
+    "children": {
+        "fields": {
+            "Ftask_url": "a::attr(href)"
+        }
+    }
+}

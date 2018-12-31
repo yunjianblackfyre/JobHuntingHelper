@@ -1,0 +1,7 @@
+2018-11-21 21:02:07,937 - test_general - INFO - close ExceptionResponse
+2018-11-21 21:02:30,877 - test_general - INFO - close ExceptionResponse
+2018-11-21 21:02:57,783 - test_general - INFO - close ExceptionResponse
+2018-11-21 21:03:25,863 - test_general - INFO - close ExceptionResponse
+2018-11-21 21:04:01,463 - test_general - INFO - close ExceptionResponse
+2018-11-21 21:04:27,990 - test_general - INFO - close ExceptionResponse
+2018-11-21 21:04:58,463 - test_general - INFO - close ExceptionResponse
