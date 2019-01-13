@@ -1,8 +1,6 @@
-# -*- coding:utf-8 -*-
-
-"""
-线程池，用于高效执行某些任务。
-"""
+#   AUTHOR: Sibyl System
+#     DATE: 2018-04-19
+#     DESC: 线程池，用于执行计算密集型任务
 
 import queue
 import threading

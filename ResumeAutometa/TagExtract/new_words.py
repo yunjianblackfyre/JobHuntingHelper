@@ -1,14 +1,6 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-03
-#     DESC: new words extraction
-
-'''
-详细说明：
-本新词提取算法来自于网文：
-互联网时代的社会语言学：基于SNS的文本数据挖掘
-链接：http://www.matrix67.com/blog/archives/5044
-感谢UP主提供的简单而又强大的算法！
-'''
+#     DESC: 利用左右熵与凝聚度过滤新词
 
 import math
 from ResumeAutometa.Foundations.utils import *
@@ -28,25 +20,25 @@ class NewWordExtract:
     # 初始化
     def __init__(self, tolerance):
         self.tolerance = tolerance
-        self.word2prob = {}     # 词概率
-        self.word2entr_dict = {}  # 词索引表
-        self.word2sld_lvl = {}  # 凝固度
-        self.word2free_lvl = {}  # 自由度
-        self.charactors = []         # 词列表
-        self.existed_words = set()     # 先今已经存在的词
-        self.new_words_chi = {}     # 中文新词列表
+        self.word2prob = dict()         # 词概率
+        self.word2entr_dict = dict()    # 词索引表
+        self.word2sld_lvl = dict()      # 凝固度
+        self.word2free_lvl = dict()     # 自由度
+        self.charactors = list()        # 词列表
+        self.existed_words = set()      # 先今已经存在的词
+        self.new_words_chi = dict()     # 中文新词列表
         self.len_charactors = 0
         self.len_possible_words = 0
         self.full_stop_words = FULL_STOP_WORDS
         
     # 每次处理完一本书，重置
     def reset(self):
-        self.word2prob = {}     # 词概率
-        self.word2entr_dict = {}  # 词索引表
-        self.word2sld_lvl = {}  # 凝固度
-        self.word2free_lvl = {}  # 自由度
-        self.charactors = []         # 词列表
-        self.new_words_chi = {}     # 新词列表
+        self.word2prob = dict()
+        self.word2entr_dict = dict()
+        self.word2sld_lvl = dict()
+        self.word2free_lvl = dict()
+        self.charactors = []
+        self.new_words_chi = dict()
         self.len_charactors = 0
         self.len_possible_words = 0
         
@@ -84,10 +76,10 @@ class NewWordExtract:
                     free_lvl = self.word2free_lvl[free_word] 
                     sld_lvl = self.word2free_lvl[free_word]
                     prob = self.word2prob[free_word]
-                    suspicious = {}
-                    # suspicious['free_lvl'] = free_lvl
-                    # suspicious['sld_lvl'] = sld_lvl
-                    # suspicious['prob'] = prob
+                    suspicious = dict()
+                    suspicious['free_lvl'] = free_lvl
+                    suspicious['sld_lvl'] = sld_lvl
+                    suspicious['prob'] = prob
                     suspicious['sword'] = sword
                     suspicious['free_word'] = free_word
                     suspicious_info_list.append(suspicious)
@@ -137,13 +129,13 @@ class NewWordExtract:
                 right_idx = idx-1
                 left_idx = idx+offset+1
                 
-                '''
+                """
                 左右邻词列表构造说明：
                 每个词的左右邻词列表长度通常有几千以上，如果全由词典存储内存消耗十分巨大
                 所以在存储时用字符串编码。需要操作时，则将字符串解码为列表。虽然编码与解码
                 过程消耗时间，约之前的1.5倍，但是消耗的内存空间减少4倍，使得4GB内存
                 虚拟机可以一次性处理4万份招聘信息，总文字量相当于2本《资本论》
-                '''
+                """
                 
                 if this_word in self.word2entr_dict.keys() and qualify:
                     left_word = self.charactors[right_idx].strip() if right_idx > -1 else ''
@@ -240,7 +232,6 @@ class NewWordExtract:
         
         prev_entropy = self.calc_words_entropy(left_freq_list)
         nrev_entropy = self.calc_words_entropy(right_freq_list)
-        entropy = min([prev_entropy, nrev_entropy])
         return min([prev_entropy, nrev_entropy])
     
     # 计算左右邻词列表的熵

@@ -1,6 +1,8 @@
 # -*- coding:utf-8 -*-
 #   AUTHOR: Sibyl System
 #     DATE: 2018-08-13
+#     DESC：批量处理排序订单
+
 import redis
 from ResumeAutometa.Foundations.utils import *
 from ResumeAutometa.ServerData.server_db_handle import CServerDbHandle

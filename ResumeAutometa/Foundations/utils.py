@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-01
-#     DESC: static methods and variables
+#     DESC: 最通用变量、方法、类
 
 import time
 import random

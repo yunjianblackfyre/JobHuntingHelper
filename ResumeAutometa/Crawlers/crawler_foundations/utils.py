@@ -1,6 +1,6 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-02
-#     DESC: crawler utils
+#     DESC: 爬虫专用通用方法、变量、类
 
 import html
 from copy import deepcopy

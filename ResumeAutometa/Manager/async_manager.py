@@ -1,9 +1,7 @@
-# -*- coding:utf-8 -*-
-# import traceback
-# import time
-# import schedule
+#   AUTHOR: Sibyl System
+#     DATE: 2019-01-13
+#     DESC: 类信息增益过滤器
 
-import time
 from subprocess import Popen  # PIPE
 from ResumeAutometa.Config.file_paths import ASYNC_LOCATION
 

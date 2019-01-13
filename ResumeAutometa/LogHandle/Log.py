@@ -1,4 +1,8 @@
 # -*- coding:utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2019-01-13
+#     DESC: 通用LOG句柄
+
 import configparser
 import logging
 import sys

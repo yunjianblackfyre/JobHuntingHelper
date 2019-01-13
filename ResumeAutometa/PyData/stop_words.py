@@ -1,10 +1,10 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-03
-#     DESC: stop words for job info preprocess
+#     DESC: 停用词，用于新词发现算法
 
 """
 
-详细说明：
+额外说明：
 在不同领域，停止词的处理方法各有不同
 比如 能 这个词可以当做停止词去掉，然而在
 求职信息中，由于智能的词频逐年增多，所以对能字的处理

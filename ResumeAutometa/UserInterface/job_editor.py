@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2019-01-13
+#     DESC: 小助手职位投递部分
+
 from PyQt4 import QtCore, QtGui
 from ResumeAutometa.Computation.simm import simm
 from ResumeAutometa.Computation.preprocessor import CContentClassifier

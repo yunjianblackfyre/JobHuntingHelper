@@ -1,6 +1,6 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-02
-#     DESC: crawler db handle
+#     DESC: 职位批量处理专用DB客户端
 
 from ResumeAutometa.Config.interfaces import DB_INTERFACE_CFG
 from ResumeAutometa.Foundations.mysql_client import MysqlClient

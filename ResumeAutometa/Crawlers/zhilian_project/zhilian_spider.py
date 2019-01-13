@@ -1,23 +1,20 @@
-"""
-AUTHOR: Sibyl System
-DATE: 2018-04-18
-DESC: 新版智联job列表API请求参数
+# AUTHOR: Sibyl System
+# DATE: 2018-04-18
+# DESC: 新版智联job列表API请求参数
+#
+#     1. pageSize:60  # 固定参数：列表长度（默认60行）
+#     2. cityId: 773  # 动态参数：城市ID
+#     3. industry:10100 # 固定参数：行业（默认互联网/IT）
+#     4. workExperience: # 固定参数： 工作经验
+#     5. education: -1 # 固定参数：教育背景
+#     6. jobType: 666 # 动态参数：职位类型（系统集成工程师）
+#     6. companyType: -1 # 固定参数：公司类型（默认不限）
+#     7. employmentType: -1 # 固定参数：工作类型（默认不限）
+#     8. jobWelfareTag: -1 # 固定参数：公司福利类型（默认不限）
+#     9. kt: 3 # 固定参数：不知道是什么鬼（默认为3）
 
-    1. pageSize:60  # 固定参数：列表长度（默认60行）
-    2. cityId: 773  # 动态参数：城市ID
-    3. industry:10100 # 固定参数：行业（默认互联网/IT）
-    4. workExperience: # 固定参数： 工作经验
-    5. education: -1 # 固定参数：教育背景
-    6. jobType: 666 # 动态参数：职位类型（系统集成工程师）
-    6. companyType: -1 # 固定参数：公司类型（默认不限）
-    7. employmentType: -1 # 固定参数：工作类型（默认不限）
-    8. jobWelfareTag: -1 # 固定参数：公司福利类型（默认不限）
-    9. kt: 3 # 固定参数：不知道是什么鬼（默认为3）
-"""
-
-# from scrapy import Request
 from scrapy.crawler import CrawlerProcess
-from urllib.parse import urlparse, parse_qs, urlencode, ParseResult
+from urllib.parse import parse_qs, urlencode, ParseResult
 from ResumeAutometa.Crawlers.crawler_foundations.universal_spider import *
 
 city_id_list = ["765", "530", "538", "763", "531", "801", "653", "736", "600", "613", "635", "702",

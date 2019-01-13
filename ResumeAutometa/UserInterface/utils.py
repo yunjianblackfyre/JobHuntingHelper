@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2019-01-13
+#     DESC: 小助手专用基础方法、变量、类
+
 import random
 import time
 from ResumeAutometa.Foundations.utils import read_lines

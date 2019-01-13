@@ -1,10 +1,9 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-09-18
-#     DESC: tencent spider
+#     DESC: 腾讯社招爬虫
 
-# from scrapy import Request
 from scrapy.crawler import CrawlerProcess
-from urllib.parse import urlparse, parse_qs, urljoin, urlencode, ParseResult
+from urllib.parse import urljoin, urlencode, ParseResult
 from ResumeAutometa.Crawlers.crawler_foundations.universal_spider import *
 
 LID_LIST = [    # 工作地点

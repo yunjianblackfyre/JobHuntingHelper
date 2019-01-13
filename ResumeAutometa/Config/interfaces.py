@@ -1,6 +1,6 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-01
-#     DESC: interfaces for programs
+#     DESC: 所有接口配置信息
 
 DB_INTERFACE_CFG = {
     'host': 'localhost',

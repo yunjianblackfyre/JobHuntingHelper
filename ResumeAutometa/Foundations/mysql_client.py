@@ -1,7 +1,6 @@
-#COPYRIGHT: Tencent flim
-#   AUTHOR: paveehan,eugenechen
-#     DATE: 2016-07-18
-#     DESC: mysql client
+#   AUTHOR: Sibyl System
+#     DATE: 2018-04-19
+#     DESC: MySQL客户端
 
 import mysql.connector
 
@@ -9,10 +8,10 @@ from ResumeAutometa.Foundations.exception import Exc
 from ResumeAutometa.Foundations.utils import StopWatch
 
 
-ERROR_RECORD_EXISTS  = -1012
-ERROR_INVALID_PARAM  = -1013
+ERROR_RECORD_EXISTS = -1012
+ERROR_INVALID_PARAM = -1013
 ERROR_CONNECT_FAILED = -1014
-ERROR_SQL            = -1015
+ERROR_SQL = -1015
 
 
 class MysqlClient(object):
@@ -37,19 +36,18 @@ class MysqlClient(object):
         
         self.connect()
 
-
     def connect(self):
         data = {
-            'host' : self._host,
-            'port' : self._port,
-            'user' : self._user,
-            'password' : self._password,
-            'connection_timeout' : self._connection_timeout,
-            'autocommit' : False,
-            'charset' : 'utf8',
-            'use_unicode' : True, #strings coming from mysql are returned as python unicode literals.
-            'use_pure' : True,
-            'raw' : False
+            'host': self._host,
+            'port': self._port,
+            'user': self._user,
+            'password': self._password,
+            'connection_timeout': self._connection_timeout,
+            'autocommit': False,
+            'charset': 'utf8',
+            'use_unicode': True,
+            'use_pure': True,
+            'raw': False
         }
             
         try:
@@ -94,7 +92,6 @@ class MysqlClient(object):
             raise Exc(-1, e)
             
         delay = stop_watch.get_elapsed_milliseconds()
-        
 
     def insert(self, val):
         """data: dict or list
@@ -200,22 +197,22 @@ if __name__ == '__main__':
     import time
     
     config = {
-        'host':'119.28.26.222',
-        'port':3306,
-        'user':'root',
-        'password':'worinimamaipi_caonimabi23333_yunjianblackfyre1815',
+        'host': '119.28.26.222',
+        'port': 3306,
+        'user': 'root',
+        'password': 'worinimamaipi_caonimabi23333_yunjianblackfyre1815',
         'connection_timeout': 5000
     }
     db = MysqlClient(**config)
     
-    #insert
+    # insert
     data = {
-        'Ftitle':'软件工程师', 
-        'Fh5_url':'https://www.ff.com',
-        'Fcontent':'杀了一个程序猿祭天',
-        'Fcreate_time':time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
-        'Fmodify_time':time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
-        'Flstate':0
+        'Ftitle': '软件工程师',
+        'Fh5_url': 'https://www.ff.com',
+        'Fcontent': '杀了一个程序猿祭天',
+        'Fcreate_time': time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+        'Fmodify_time': time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+        'Flstate': 0
     }
     db.set_db_table('db_crawlers', 't_csdn_detail')
     '''
@@ -239,7 +236,7 @@ if __name__ == '__main__':
     print(d)
     '''
     
-    #update
+    # update
     '''
     db.set_db_table('d_wyp', 't_stat')
     data = {'Fage' : 18}

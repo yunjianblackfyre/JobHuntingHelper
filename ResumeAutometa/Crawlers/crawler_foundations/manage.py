@@ -1,8 +1,7 @@
 # -*- coding:utf-8 -*-
-# import traceback
-# import time
-# import schedule
-#
+#   AUTHOR: Sibyl System
+#     DATE: 2018-01-02
+#     DESC: 爬虫调度器，伪装成人类访问
 
 import time
 import traceback
@@ -105,7 +104,7 @@ class CMissAdler(object):
             for job_name, job_info in job_info_dict.items():
                 try:
                     interval = (job_info["job_task_begin"], job_info["job_task_end"])
-                    p = Popen(["python3", SPIDER_SHELL, job_name, str(interval[0]), str(interval[1]) ])  # stdout=PIPE, stderr=PIPE
+                    p = Popen(["python3", SPIDER_SHELL, job_name, str(interval[0]), str(interval[1])])
                     running_task.append(p)
                     self.log_handler.log.info("Crawler %s with interval %s started" % (job_name, str(interval)))
                     job_info["job_task_begin"] += job_info["job_task_step"]

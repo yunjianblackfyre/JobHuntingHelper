@@ -1,21 +1,17 @@
-"""
-AUTHOR: Sibyl System
-DATE: 2018-04-18
-DESC: 前程无忧 job列表API请求参数
-
-    搜索URL示例：
-    https://search.51job.com/list/040000,000000,0106,01,9,99,%2520,2,1.html 北京+计算机软件+高级软件工程师
-    https://search.51job.com/list/010000,000000,0106,01,9,99,%2520,2,1.html 深圳+计算机软件+高级软件工程师
-    https://search.51job.com/list/020000,000000,0106,01,9,99,%2520,2,1.html 上海+计算机软件+高级软件工程师
-    https://search.51job.com/list/020000,000000,0148,01,9,99,%2520,2,1.html 上海+计算机软件+算法工程师
-    https://search.51job.com/list/020000,000000,0148,31,9,99,%2520,2,1.html 上海+通信/电信+算法工程师
-    https://search.51job.com/list/01,000000,0106,01,9,99,%2520,2,1.html
-
-"""
+# AUTHOR: Sibyl System
+# DATE: 2018-04-18
+# DESC: 前程无忧 job列表API请求参数
+#
+#     搜索URL示例：
+#     https://search.51job.com/list/040000,000000,0106,01,9,99,%2520,2,1.html 北京+计算机软件+高级软件工程师
+#     https://search.51job.com/list/010000,000000,0106,01,9,99,%2520,2,1.html 深圳+计算机软件+高级软件工程师
+#     https://search.51job.com/list/020000,000000,0106,01,9,99,%2520,2,1.html 上海+计算机软件+高级软件工程师
+#     https://search.51job.com/list/020000,000000,0148,01,9,99,%2520,2,1.html 上海+计算机软件+算法工程师
+#     https://search.51job.com/list/020000,000000,0148,31,9,99,%2520,2,1.html 上海+通信/电信+算法工程师
+#     https://search.51job.com/list/01,000000,0106,01,9,99,%2520,2,1.html
 
 # from scrapy import Request
 from scrapy.crawler import CrawlerProcess
-from urllib.parse import urlparse, parse_qs, urljoin, urlencode, ParseResult
 from ResumeAutometa.Crawlers.crawler_foundations.universal_spider import *
 
 CITY_LIST = [
@@ -108,12 +104,6 @@ class F1JobDetailSpider(JobDetailSpider):
 
 
 if __name__ == '__main__':
-    '''
-    for city_elem in CITY_LIST:
-        for cat_elem in CAT_LIST:
-            url = "https://search.51job.com/list/" + city_elem + "," + cat_elem + ",%2520,2,1.html"
-            print(url)
-    '''
     try:
         process = CrawlerProcess()
 

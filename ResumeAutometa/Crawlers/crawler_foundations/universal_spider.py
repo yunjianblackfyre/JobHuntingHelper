@@ -1,6 +1,6 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-02
-#     DESC: universal spider, father to all spider
+#     DESC: 通用爬虫，所有爬虫的父类
 
 import traceback
 from scrapy.selector import Selector
@@ -91,8 +91,7 @@ class RowBuilder(object):
 
 # 通用爬取条目类
 class UniversalItem(Item):
-    # define the fields for your item here like:
-    row = Field() # row就是一个dict item[row][FXXX]
+    row = Field()
     from_url = Field()
     settings = Field()
     row_builder = RowBuilder()
@@ -100,7 +99,6 @@ class UniversalItem(Item):
 
 # 通用入库流水线类
 class UniversalPipeline(object):
-
     def close_spider(self, spider):
         spider.log_handler.log.info("close UniversalPipeline")
         
@@ -120,7 +118,6 @@ class UniversalPipeline(object):
             
 # 通用爬虫类
 class JobDetailSpider(Spider):
-
     # 通用配置
     custom_settings = {
         'DNSCACHE_ENABLED': True,

@@ -1,10 +1,9 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-02
-#     DESC: exception response shall be intercepted here
+#     DESC: 异常响应截取，并记录到数据库
 
 from scrapy import signals
 from pydispatch import dispatcher
-from ResumeAutometa.Crawlers.crawler_foundations.crawler_db_handle import CCrawlerDbHandle
 from ResumeAutometa.Crawlers.crawler_foundations.utils import *
 
 

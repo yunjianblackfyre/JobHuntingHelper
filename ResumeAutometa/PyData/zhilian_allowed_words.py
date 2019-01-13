@@ -1,3 +1,7 @@
+#   AUTHOR: Sibyl System
+#     DATE: 2018-01-03
+#     DESC: 机器+人工最终过滤出的标签
+
 ZHILIAN_ALLOWED_WORDS = {
 'GIS', 'SAP', '报表', 'ABAP', 'ERP', 'SD', '物流', 'CRM', '行业软件', 'MM', 'PP', '财务软件', 'OA', '事务', '信息安全', '地理信息', '业务知识', '管理系统', 'MES', 'PACS', '进销存', 'DBA', 'WMS', 'BW', 'NC', 'LIS', 'FICO', '制造业', 'EBS', 'HR', 'HIS', 'PDM', 'PLM',
 

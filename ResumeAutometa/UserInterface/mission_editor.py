@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2019-01-13
+#     DESC: 小助手职位下载部分
+
 from PyQt4 import QtCore, QtGui
 from ResumeAutometa.Foundations.utils import *
 from ResumeAutometa.UserInterface.utils import QuickInterface, check_grand_setting

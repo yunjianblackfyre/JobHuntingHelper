@@ -1,21 +1,8 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-04-25
-#     DESC: 
-
-'''
-构造word2vector模块所需的训练数据和测试数据集
-训练数据构建方法大致描述：
-将文本用结巴分词成词序列，并且过滤之，如下：
-文档1:C++ 教学 模块 训练 指针
-文档2:python3 AI 大数据 人工智能
-文档3:区块链 去中心化
-......
-将这些序列换行保存在两个.txt文件中，分别为测试和训练
-预计该文件的计量单位为G级别
-'''
+#     DESC: 构建主题模型训练材料
 
 import traceback
-import time
 from ResumeAutometa.Foundations.utils import *
 from ResumeAutometa.Foundations.batch_proc import BatchProc
 from multiprocessing import Pool
@@ -23,16 +10,15 @@ from ResumeAutometa.ServerData.server_db_handle import CServerDbHandle
 from ResumeAutometa.Computation.preprocessor import LdaTrainContentPreproc
 from ResumeAutometa.Config.file_paths import LDA_TRAINING_DATA_PATH
 
-TRAINING_DATA_RATIO = 0.98    # 训练数据占比
-TRAINING_SAMPLE_TOLERANCE = 50000  # 最小训练样本数 
-TASK_NUM_TOLERANCE = 5  # 最大进程数
+TRAINING_DATA_RATIO = 0.98          # 训练数据占比
+TRAINING_SAMPLE_TOLERANCE = 50000   # 最小训练样本数
+TASK_NUM_TOLERANCE = 5              # 最大进程数
 
 DB_NAME = "db_crawlers"
 DB_TABLE_NAME = "t_zhilian_detail_3"
 
 
 class IdListGenerator(object):
-    
     def __init__(self):
         self._db = CServerDbHandle()
         
@@ -48,7 +34,6 @@ class IdListGenerator(object):
 
 
 class TrainDataBuilder(BatchProc):
-
     def __init__(self, batch_size, proc_id, chunck_file):
         super(TrainDataBuilder, self).__init__("train_data_builder")
         self.batch_size = batch_size
@@ -191,12 +176,12 @@ def distribute_task(batch_size, task_num=2):
         write_data2json(proc_chuncks[idx], LDA_TRAINING_DATA_PATH + chunck_file)
         time.sleep(1)
         
-    p = Pool()           #开辟进程池
+    p = Pool()  # 开辟进程池
     for idx in range(len(chunck_file_list)):
         chunck_file = chunck_file_list[idx]
         p.apply_async(run_task, args=(batch_size, idx, chunck_file))
         
-    p.close() #关闭进程池
+    p.close()  # 关闭进程池
     p.join()
     time.sleep(2)
     

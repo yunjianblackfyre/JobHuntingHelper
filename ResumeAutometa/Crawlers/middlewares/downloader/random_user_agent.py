@@ -1,6 +1,7 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-08-03
-#     DESC: request shall be added with random user agent
+#     DESC: 随机报头
+
 import random
 from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
 

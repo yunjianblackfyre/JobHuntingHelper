@@ -1,18 +1,7 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-03-03
-#     DESC: word2vector encapsulation
+#     DESC: 训练主题模型
 
-'''
-详细说明：
-训练词向量
-'''
-
-# import re
-# import math
-# import json
-# import sys
-# import os
-# from gensim.test.utils import common_dictionary, common_corpus
 from gensim.test.utils import datapath
 from gensim.models.ldamodel import LdaModel
 from ResumeAutometa.Config.file_paths import LDA_TRAINING_DATA_PATH
@@ -20,7 +9,6 @@ from ResumeAutometa.Foundations.utils import *
 
 
 class MyLda(object):
-
     def __init__(self, train_file, idf_file, wordid_file, idword_file, model_file):
         self.train_data = read_lines(LDA_TRAINING_DATA_PATH + train_file)
         self.word2idf = read_file_json(LDA_TRAINING_DATA_PATH + idf_file)
@@ -77,6 +65,3 @@ if __name__ == '__main__':
     lda_trainer = MyLda("lda_testing.txt", "lda_testing_wordidf.txt",
                         "lda_testing_wordid.txt", "lda_testing_idword.txt", "lda_testing_model")
     lda_trainer.process()
-    
-    
-    

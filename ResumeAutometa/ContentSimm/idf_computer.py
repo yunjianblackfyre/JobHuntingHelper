@@ -2,17 +2,6 @@
 #     DATE: 2018-04-24
 #     DESC: 关键词IDF值全量更新
 
-'''
-关键词IDF值全量更新
-流水批量读取预处理成功的文档
-提取文本信息，计数每个词所属文档数
-'''
-
-# import ssl
-# import requests
-# import urllib.request
-# from urllib.request import Request
-
 import numpy as np
 from ResumeAutometa.Foundations.utils import *
 from ResumeAutometa.Config.file_paths import LDA_TRAINING_DATA_PATH
@@ -55,7 +44,6 @@ class IdfComputer(object):
         arr_idf_wordidx = np.zeros(self.word_count, dtype='int32')
         arr_Doc_num = np.zeros(self.word_count, dtype='float64')
         arr_word_count = np.zeros(self.word_count, dtype='float64')
-        # arr_idf = np.zeros(self.word_count, dtype='float64')
         
         # 填装IDF列表容器
         Doc_num = self.Doc_count

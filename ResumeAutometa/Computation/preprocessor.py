@@ -86,6 +86,10 @@ class ContentPreproc(object):
 
         return content_keyword_list
 
+    def content_preprocess(self, content):
+        content_keyword_list = self.gen_words(content)
+        return " ".join(content_keyword_list)
+
 
 # 用于新词发现的内容预处理
 class NewWordContentPreproc(object):

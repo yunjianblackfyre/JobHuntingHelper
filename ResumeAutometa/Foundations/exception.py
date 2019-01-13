@@ -1,9 +1,9 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-04-19
-#     DESC: exception for all
+#     DESC: 定制化异常
 
 
-ERROR_NOTIMPLEMENTED        = 1099
+ERROR_NOTIMPLEMENTED = 1099
 
 
 class Exc(Exception):

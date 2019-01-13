@@ -1,3 +1,7 @@
+#   AUTHOR: Sibyl System
+#     DATE: 2019-01-13
+#     DESC: 小助手主程序
+
 import sys
 from PyQt4.QtGui import *
 from ResumeAutometa.UserInterface.mission_editor import MissionEditor

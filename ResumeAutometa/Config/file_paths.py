@@ -1,4 +1,6 @@
-# -*- coding:utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2018-01-01
+#     DESC: 所有文件路径
 
 # ################ windows环境文件路径【小助手测试】 ################
 
@@ -6,11 +8,11 @@ DEBUG = True
 
 CHROME_WEBDRIVER_PATH_FILE = "E:/PycharmProject/ResumeAutometa/UserInterface/files/chrome_path.txt"
 
-LDA_MODEL_PATH = "E:/PycharmProject/ResumeAutometa/Resources/Lda/lda_training_model"
+LDA_MODEL_PATH = "E:/PycharmProject/ResumeAutometa/Resources/Train/lda_w2v/lda_training_model"
 
-WORD_TO_ID_PATH = "E:/PycharmProject/ResumeAutometa/Resources/Lda/lda_training_wordid.txt"
+WORD_TO_ID_PATH = "E:/PycharmProject/ResumeAutometa/Resources/Train/lda_w2v/lda_training_wordid.txt"
 
-WORD_TO_IDF = "E:/PycharmProject/ResumeAutometa/Resources/Lda/lda_training_wordidf.txt"
+WORD_TO_IDF = "E:/PycharmProject/ResumeAutometa/Resources/Train/lda_w2v/lda_training_wordidf.txt"
 
 FILTERED_NEW_WORDS = "E:/PycharmProject/ResumeAutometa/Resources/JieBa/filtered_new_words.txt"
 
@@ -83,6 +85,12 @@ DEFAULT_DICT_NAME = "jieba\dict.txt"
 
 NEW_WORDS_EXTRACT_RESOURCES = "E:/PycharmProject/ResumeAutometa/Resources/Tag/new_words/"
 
+IDF_FILTER_EXTRACT_RESOURCES = "E:/PycharmProject/ResumeAutometa/Resources/Tag/idf_filter/"
+
+IFGAIN_FILTER_EXTRACT_RESOURCES = "E:/PycharmProject/ResumeAutometa/Resources/Tag/ifgain_filter/"
+
+WORDVECTOR_FILTER_EXTRACT_RESOURCES = "E:/PycharmProject/ResumeAutometa/Resources/Tag/word_vector/"
+
 CRAWLER_FOUNDATION = "E:/PycharmProject/ResumeAutometa/Crawlers/crawler_foundations/"
 
 CRAWLER_RULE = "E:/PycharmProject/ResumeAutometa/Crawlers/crawler_foundations/crawler_rules/"
@@ -92,8 +100,6 @@ LDA_TRAINING_DATA_PATH = "E:/PycharmProject/ResumeAutometa/Resources/Train/"
 LOG_CLUSTER_LOCATION = "E:/PycharmProject/ResumeAutometa/LogCluster/"
 
 LOG_CONFIG_LOCATION = "E:/PycharmProject/ResumeAutometa/Config/log_config.ini"
-
-WORD_TO_VECTOR = "E:/PycharmProject/ResumeAutometa/Resources/Lda/word2vector.txt"
 
 # ################ Linux环境文件路径 ################
 '''
@@ -111,11 +117,15 @@ FILTERED_NEW_WORDS = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/JieBa
 
 NEW_WORDS_FOR_JIEBA = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/JieBa/new_words4jieba.txt"
 
-WORD_TO_VECTOR = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/Lda/word2vector.txt"
-
 WORD_TO_IDF = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/Train/lda_w2v/lda_training_wordidf.txt"
 
 NEW_WORDS_EXTRACT_RESOURCES = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/Tag/new_words/"
+
+IDF_FILTER_EXTRACT_RESOURCES = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/Tag/idf_filter/"
+
+IFGAIN_FILTER_EXTRACT_RESOURCES = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/Tag/ifgain_filter/"
+
+WORDVECTOR_FILTER_EXTRACT_RESOURCES = "/home/ubuntu/PycharmProject/ResumeAutometa/Resources/Tag/word_vector/"
 
 JIEBA_BASE_DICT = "/home/ubuntu/PycharmProject/jieba/dict.txt"
 

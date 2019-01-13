@@ -1,6 +1,6 @@
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-03
-#     DESC: stop words for all occasions
+#     DESC: 最全停用词
 
 STOP_WORDS_ENG = {
     "a",

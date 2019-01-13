@@ -1,32 +1,7 @@
 # -*- coding:utf-8 -*-
 #   AUTHOR: Sibyl System
 #     DATE: 2018-01-03
-
-'''
-csdn资讯预处理程序
-预处理结果分为以下几类
-
-1.处理成功，无缺陷
-2.处理成功，有缺陷
-3.处理失败，有异常
-
-缺陷和异常分为以下两种方式记录
-1.单次记录，作为log输出
-2.多次记录，作为statistic输出
-
-预处理结果目前写日志文件
-后续考虑替换为数据库
-因为对预处理结果的观察学习
-有助于后续预处理程序的优化
-以及对于源数据的认知
-'''
-
-# import ssl
-# import requests
-# import urllib.request
-# from urllib.request import Request
-
-# import traceback
+#     DESC：利用模型批量分类职位
 
 from ResumeAutometa.ServerData.utils import get_sql_in_condition_string
 from ResumeAutometa.Foundations.utils import *

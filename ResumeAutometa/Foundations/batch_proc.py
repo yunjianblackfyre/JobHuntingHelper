@@ -2,11 +2,6 @@
 #     DATE: 2018-01-03
 #     DESC: 数据批处理基类
 
-'''
-批量数据处理基类
-被所有数据批量处理类继承
-'''
-
 import traceback
 from ResumeAutometa.LogHandle.Log import Log
 from ResumeAutometa.ServerData.server_db_handle import CServerDbHandle
@@ -17,10 +12,10 @@ RETRY_TIMES = 0
 class BatchProc:
 
     def __init__(self, proc_name):
-        self.firelinker = {     # 当前函数为下一个函数提供的数据
-            "result": "Usurvive"  # 初始化为“成功”
+        self.firelinker = {         # 当前函数为下一个函数提供的数据
+            "result": "Usurvive"    # 初始化为“成功”
         }    
-        self.abyss = {          # 异常、缺陷信息统计器
+        self.abyss = {              # 异常、缺陷信息统计器
             "Usurvive": 0,
             "URdead": 0,
             "UPoison": 0,
@@ -31,10 +26,10 @@ class BatchProc:
 
     # 每次跑完一批数据，重置监视器（点燃篝火）
     def _bonfire(self):
-        self.firelinker = {     # 当前函数为下一个函数提供的数据
-            "result":"Usurvive"  # 初始化为“成功”
+        self.firelinker = {         # 当前函数为下一个函数提供的数据
+            "result":"Usurvive"     # 初始化为“成功”
         }    
-        self.abyss = {          # 异常、缺陷信息统计器
+        self.abyss = {              # 异常、缺陷信息统计器
             "Usurvive": 0,
             "URdead": 0,
             "UPoison": 0,
@@ -66,6 +61,7 @@ class BatchProc:
         
     def main(self):
         try:
+            print("Lover Fucker")
             self.run()
             self.close()
         except:

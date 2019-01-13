@@ -1,3 +1,8 @@
+# -*- coding:utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2018-01-02
+#     DESC: 爬虫启动器：接受参数输入，启动相应的爬虫
+
 import traceback
 import sys
 from ResumeAutometa.LogHandle.Log import Log
