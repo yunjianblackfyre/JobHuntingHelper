@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2018-04-24
+#     DESC: 浏览器模拟人类行为合集
 
 from ResumeAutometa.UserInterface.utils import sleep_random
 from selenium.webdriver.common.keys import Keys

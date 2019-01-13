@@ -1,4 +1,7 @@
 # -*- coding:utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2018-04-24
+#     DESC: 浏览器投递简历
 
 import traceback
 from ResumeAutometa.Foundations.utils import *

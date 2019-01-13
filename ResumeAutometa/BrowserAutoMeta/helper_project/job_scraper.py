@@ -1,4 +1,8 @@
 # -*- coding:utf-8 -*-
+#   AUTHOR: Sibyl System
+#     DATE: 2018-04-24
+#     DESC: 浏览器爬取职位
+
 from ResumeAutometa.Foundations.utils import *
 from selenium import webdriver
 from ResumeAutometa.UserInterface.utils import get_chrome_path
